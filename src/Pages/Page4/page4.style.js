@@ -50,6 +50,6 @@ const styles = StyleSheet.create({
     fontSize: calcS(25),
     color: "#4E4E4E",
   },
-  verticalCenter: { top: "50%", transform: "translate(0%, -25%)" },
+  verticalCenter: { margin: "auto" },
 });
 export default styles;

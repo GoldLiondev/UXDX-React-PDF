@@ -24,7 +24,7 @@ const style = StyleSheet.create({
     marginTop: calcS(283 / 4),
   },
   borderview: {
-    borderLeft: "5px",
+    borderLeft: calcS(5),
     textAlign: "center",
     width: calcS(5),
     height: calcS(200),

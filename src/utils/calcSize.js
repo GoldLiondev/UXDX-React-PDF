@@ -1,8 +1,12 @@
+const defaultsizeW=2480;
+const defaultsizeH=3508;
+const Totalwidth = 595.28;
+const Totalheight = 841.89;
+
 const calcS = (size) => {
-  return size + "px";
+  return (size * Totalwidth) / defaultsizeW + "px";
 };
-const Totalwidth = 1240 * 2;
-const Totalheight = 1754 * 2;
+
 const isOdd = (index) => {
   return index % 2 === 1;
 };

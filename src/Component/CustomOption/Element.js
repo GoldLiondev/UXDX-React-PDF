@@ -4,7 +4,7 @@ import { View, Text } from "@react-pdf/renderer";
 import { Remarkable } from "remarkable";
 import ReactHtmlParser from "html-react-parser";
 import isEmpty from "../../utils/isEmpty";
-import "./description.style.css";
+import { calcS } from "../../utils/calcSize";
 const getReactPDFCom = (htmlElement) => {
   if (typeof htmlElement === "string") {
     const type = htmlElement.type;
@@ -93,11 +93,10 @@ const htmlParser = (markdown) => {
   }
 };
 export default class Element extends Component {
-  componentDidMount() {}
   render() {
     const { data } = this.props;
     return (
-      <View style={{ width: "1000px", height: "1000px" }}>
+      <View style={{ width: calcS(1000), height: calcS(1000) }}>
         {htmlParser(data)}
       </View>
     );

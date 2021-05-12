@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
     fontSize: calcS(40),
     color: "#727272",
     letterSpacing: calcS(1),
-    lineHeight: calcS(1.3),
   },
   RecruitmentPIC: {
     width: calcS(92),
@@ -52,24 +51,22 @@ const styles = StyleSheet.create({
     fontFamily: "OpenSansBold",
     textTransform: "uppercase",
     width: calcS(691),
-    height: calcS(61),
+    height: calcS(80),
     fontSize: calcS(45),
     color: "#4E4E4E",
-    lineHeight: calcS(1.3),
   },
   SubGroupData: {
-    marginTop: calcS(18),
+    marginTop: calcS(1),
     width: calcS(631),
     height: calcS(123),
     fontSize: calcS(30),
     color: "#727272",
-    lineHeight: calcS(1.3),
   },
   tablewidth: 1800,
   tableHeader: {
     fontSize: calcS(40),
     fontFamily: "SpenSansSemiBold",
   },
-  verticalCenter: { top: "50%", transform: "translate(0%, -25%)" },
+  verticalCenter: { margin: "auto" },
 });
 export default styles;

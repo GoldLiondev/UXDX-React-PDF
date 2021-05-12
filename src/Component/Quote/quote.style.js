@@ -33,12 +33,11 @@ const styles = StyleSheet.create({
     marginTop: calcS(40.87),
     fontWeight: 600,
     letterSpacing: calcS(2),
-    lineHeight: calcS(1.2),
     color: "white",
   },
   LastMark1: {
     width: calcS(230),
-    height: calcS(34),
+    height: calcS(500),
     marginTop: calcS(498),
     fontWeight: 600,
     fontSize: calcS(25),

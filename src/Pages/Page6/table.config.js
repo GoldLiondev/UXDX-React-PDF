@@ -1,4 +1,5 @@
 import { Text, View } from "@react-pdf/renderer";
+import { calcS } from "../../utils/calcSize";
 import styles from "./page6.style";
 
 const config = {
@@ -7,7 +8,7 @@ const config = {
   filter: "Category",
   Category: {
     title: (width, height) => (
-      <View style={{ width, height, paddingLeft: "20px" }}>
+      <View style={{ width, height, paddingLeft: calcS(20) }}>
         <Text style={[{ width }, styles.tableHeader, styles.verticalCenter]}>
           Category
         </Text>
@@ -19,26 +20,26 @@ const config = {
     style: {
       textAlign: "left",
       fontWeight: "bold",
-      fontSize: "35px",
+      fontSize: calcS(35),
       color: "black",
     },
   },
   Name: {
     title: (width, height) => (
-      <View style={{ width, height, paddingLeft: "20px" }}>
+      <View style={{ width, height, paddingLeft: calcS(20) }}>
         <Text style={[{ width }, styles.tableHeader, styles.verticalCenter]}>
           Option
         </Text>
       </View>
     ),
-    style: { textAlign: "left", fontSize: "35px", color: "black" },
+    style: { textAlign: "left", fontSize: calcS(35), color: "black" },
     value: (value) => {
       return value;
     },
   },
   Price: {
     title: (width, height) => (
-      <View style={{ width, height, paddingLeft: "20px" }}>
+      <View style={{ width, height, paddingLeft: calcS(20) }}>
         <Text style={[{ width }, styles.tableHeader, styles.verticalCenter]}>
           Price
         </Text>
@@ -49,7 +50,7 @@ const config = {
     },
     style: {
       textAlign: "right",
-      fontSize: "35px",
+      fontSize: calcS(35),
       color: "black",
     },
   },

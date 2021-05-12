@@ -3,9 +3,12 @@ import { Text, View } from "@react-pdf/renderer";
 import styles from "./Toc.style";
 import data from "./Toc.data.json";
 import Layout from "../../Component/Layout";
+import { calcS } from "../../utils/calcSize";
 const Toc = () => (
   <Layout title1={data.Heading1} title2={data.Heading2}>
-    <View style={{ width: "10px", height: "10px", marginTop: "50px" }}></View>
+    <View
+      style={{ width: calcS(10), height: calcS(10), marginTop: calcS(50) }}
+    ></View>
     <View style={styles.SubGroup}>
       <View style={styles.SubPage}>
         <Text style={styles.PageNum}>{data.SubHeadingNum1}</Text>

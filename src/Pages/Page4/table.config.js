@@ -1,6 +1,7 @@
 import React from "react";
 import { startAndEndDate } from "../../utils/convertDateFormat";
 import { Text, View } from "@react-pdf/renderer";
+import { calcS } from "../../utils/calcSize";
 import styles from "./page4.style";
 const config = {
   field: [
@@ -12,7 +13,7 @@ const config = {
   widthRate: [0.2, 0.3, 0.3, 0.2],
   Conference_Name: {
     title: (width, height) => (
-      <View style={{ width, height, paddingLeft: "20px" }}>
+      <View style={{ width, height, paddingLeft: calcS(20) }} debug={true}>
         <Text style={[{ width }, styles.tableHeader, styles.verticalCenter]}>
           LOCATION
         </Text>
@@ -24,26 +25,26 @@ const config = {
     style: {
       textAlign: "left",
       fontWeight: "bold",
-      fontSize: "35px",
+      fontSize: calcS(35),
       color: "black",
     },
   },
   Conference_Start_Date: {
     title: (width, height) => (
-      <View style={[{ width, height, paddingLeft: "20px" }]}>
+      <View style={[{ width, height, paddingLeft: calcS(20) }]}>
         <Text style={[{ width }, styles.tableHeader, styles.verticalCenter]}>
           DATES
         </Text>
       </View>
     ),
-    style: { textAlign: "left", fontSize: "35px", color: "#4E4E4E" },
+    style: { textAlign: "left", fontSize: calcS(35), color: "#4E4E4E" },
     value: (value, row) => {
       return startAndEndDate(value, row.Conference_End_Date);
     },
   },
   Expected_Audience_Size: {
     title: (width, height) => (
-      <View style={[{ width, height, paddingLeft: "20px" }]}>
+      <View style={[{ width, height, paddingLeft: calcS(20) }]}>
         <Text style={styles.tableHeader}>AUDIENCE SIZE</Text>
         <Text style={styles.subTableHeader}> In-Person / Online</Text>
       </View>
@@ -54,19 +55,19 @@ const config = {
     style: {
       textAlign: "left",
       fontWeight: "bold",
-      fontSize: "35px",
+      fontSize: calcS(35),
       color: "#4E4E4E",
     },
   },
   Conference_Venue_Type: {
     title: (width, height) => (
-      <View style={[{ width, height, paddingLeft: "20px" }]}>
+      <View style={[{ width, height, paddingLeft: calcS(20) }]}>
         <Text style={[{ width }, styles.tableHeader, styles.verticalCenter]}>
           FORMAT
         </Text>
       </View>
     ),
-    style: { fontSize: "35px", color: "#4E4E4E" },
+    style: { fontSize: calcS(35), color: "#4E4E4E" },
     value: (value) => {
       return value.reduce((start, end) => {
         return start + " & " + end;

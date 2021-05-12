@@ -83,7 +83,7 @@ export default class index extends Component {
         ) : myCaseFlag ? (
           <PdfImage
             style={{
-              maxHeight: "280px",
+              maxHeight: calcS(280),
               margin: "auto",
               objectFit: "cover",
             }}

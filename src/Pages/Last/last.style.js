@@ -13,7 +13,6 @@ const style = StyleSheet.create({
     fontSize: calcS(40),
     color: "#727272",
     letterSpacing: calcS(1.5),
-    lineHeight: calcS(1.3),
   },
   galleryView: {
     left: calcS(331),

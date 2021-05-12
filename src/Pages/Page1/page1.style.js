@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
     fontFamily: "SpenSansSemiBold",
     fontSize: calcS(45),
     color: "#4E4E4E",
-    lineHeight: calcS(1.3),
     letterSpacing: calcS(1.5),
   },
   HeadingParagraph: {
@@ -39,7 +38,6 @@ const styles = StyleSheet.create({
     fontSize: calcS(40),
     color: "#727272",
     letterSpacing: calcS(1.5),
-    lineHeight: calcS(1.3),
   },
   HeadingParagraph1: {
     width: calcS(1166),

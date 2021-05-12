@@ -38,7 +38,7 @@ export default class Quote extends Component {
               <Text
                 style={[
                   styles.footerText1,
-                  { fontSize: this.props.font, width: dataWidth },
+                  { fontSize: calcS(this.props.font), width: dataWidth },
                 ]}
               >
                 {this.props.data.data.Quote}
@@ -67,7 +67,10 @@ export default class Quote extends Component {
                 style={styles2.Vector1}
               ></Image>
               <Text
-                style={[styles2.footerText1, { fontSize: this.props.font }]}
+                style={[
+                  styles2.footerText1,
+                  { fontSize: calcS(this.props.font) },
+                ]}
               >
                 {this.props.data.data.Quote}
               </Text>

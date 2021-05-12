@@ -29,7 +29,7 @@ export default class CustomTable extends Component {
           <View
             style={{
               width: calcS(tablewidth),
-              height: rowheight,
+              height: calcS(rowheight),
               flexDirection: "row",
             }}
           >
@@ -41,8 +41,8 @@ export default class CustomTable extends Component {
                 style={[
                   {
                     width: calcS(tablewidth * widthRate[thIndex]),
-                    height: rowheight,
-                    padding: "10px",
+                    height: calcS(rowheight),
+                    padding: calcS(10),
                   },
                   customStyle.TableHeader,
                 ]}
@@ -50,7 +50,7 @@ export default class CustomTable extends Component {
                 {/* This is th tag of header */}
                 {headerdata[titleIndex].title(
                   calcS(tablewidth * widthRate[thIndex]),
-                  rowheight
+                  calcS(rowheight)
                 )}
               </View>
             ))}
@@ -61,7 +61,7 @@ export default class CustomTable extends Component {
               style={[
                 {
                   width: calcS(tablewidth),
-                  height: rowheight,
+                  height: calcS(rowheight),
                   flexDirection: "row",
                 },
                 customStyle.trStyle,
@@ -74,9 +74,9 @@ export default class CustomTable extends Component {
                     key={"tbody td " + tdIndex}
                     style={[
                       {
-                        padding: "10px",
+                        padding: calcS(10),
                         width: calcS(tablewidth * widthRate[tdIndex]),
-                        height: rowheight,
+                        height: calcS(rowheight),
                       },
                       customStyle.tdStyle,
                     ]}
@@ -84,7 +84,7 @@ export default class CustomTable extends Component {
                     {/* This is td tag of Body */}
                     <Text
                       style={{
-                        padding: "20px",
+                        padding: calcS(20),
                         ...headerdata[fileditem].style,
                       }}
                     >

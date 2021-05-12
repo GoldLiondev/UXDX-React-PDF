@@ -1,30 +1,30 @@
 import { StyleSheet } from "@react-pdf/renderer";
-
+import { calcS } from "../../utils/calcSize";
 // Create styles
 const customstyles = StyleSheet.create({
   TableHeader: {
     backgroundColor: "#FAFAFA",
   },
-  ViewStyle: { border: "5px solid #EDEDEF" },
+  ViewStyle: { border: calcS(5) + " solid #EDEDEF" },
   tdStyle: {},
-  trStyle: { borderTop: "3px solid #EDEDEF" },
+  trStyle: { borderTop: calcS(3) + "solid #EDEDEF" },
   BorderStyle: {
-    borderTop: "3px solid #EDEDEF",
+    borderTop: calcS(3) + " solid #EDEDEF",
   },
 });
 const staticstyles = StyleSheet.create({
-  trStyle: { borderBottom: "3px solid #504F4F" },
-  tdStyle: { borderLeft: "3px solid #504F4F" },
+  trStyle: { borderBottom: calcS(3) + " solid #504F4F" },
+  tdStyle: { borderLeft: calcS(3) + " solid #504F4F" },
   TableHeader: {
-    borderLeft: "3px solid #504F4F",
-    borderBottom: "3px solid #504F4F",
+    borderLeft: calcS(3) + " solid #504F4F",
+    borderBottom: calcS(3) + " solid #504F4F",
   },
   ViewStyle: {
-    borderTop: "3px solid #504F4F",
-    borderRight: "3px solid #504F4F",
+    borderTop: calcS(3) + " solid #504F4F",
+    borderRight: calcS(3) + " solid #504F4F",
   },
   BorderStyle: {
-    borderTop: "3px solid #504F4F",
+    borderTop: calcS(3) + " solid #504F4F",
   },
 });
 const chooseStyle = (type) => {
