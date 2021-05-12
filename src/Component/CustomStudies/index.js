@@ -31,7 +31,7 @@ export default class CustomStudies extends Component {
 
                 <View style={styles.svglogoview}>
                   <SvgImage
-                    marginTop={130}
+                    marginTop={70}
                     width={500}
                     height={500}
                     url={value.data.Company_Logo[0].url}

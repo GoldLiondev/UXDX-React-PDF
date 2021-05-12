@@ -1,33 +1,38 @@
 import React from "react";
 import { Text, View, Image } from "@react-pdf/renderer";
 import styles from "./page4.style";
-import contentData from "./page4.data.json";
 import TableView from "../../Component/TableView";
-import data from "../../utils/temp";
 import Layout from "../../Component/Layout";
 import config from "./table.config";
 import Gallery from "../../Component/Gallery";
 import { calcS } from "../../utils/calcSize";
-const tabledata = data.conferences.nodes;
-const galleryData = data.companies.nodes.map((item) => {
-  return { url: item.data.Company_Logo[0].url };
-});
-const Page4 = () => (
-  <Layout title1={contentData.Heading1} title2={contentData.Heading2}>
+
+const Page4 = (props) => (
+  <Layout title1="OUR " title2="CONFERENCES">
     <View style={styles.TableView}>
       <TableView
-        tabledata={tabledata}
+        tabledata={props.tabledata}
         hearderData={config}
         width={styles.tableWidth}
         styletype={true}
       />
     </View>
     <View style={styles.ParaView}>
-      <Text style={styles.HeadingParagraph}>{contentData.ParaViewData}</Text>
+      <Text style={styles.HeadingParagraph}>
+        In addition to our main conferences, we run free community events around
+        the world.
+      </Text>
     </View>
-    <Image style={styles.WorldMap} src={contentData.WorldMap} alt="images" />
+    <Image
+      style={styles.WorldMap}
+      src="./assets/page4/image1.png"
+      alt="images"
+    />
     <View style={styles.EnterpriesView}>
-      <Text style={styles.EnterpriesParagraph}>{contentData.Enterpries}</Text>
+      <Text style={styles.EnterpriesParagraph}>
+        TRUSTED BY OVER 5,000 STARTUPS, SCALEUPS AND ENTERPRISES AROUND THE
+        WORLD
+      </Text>
     </View>
     <View
       style={{
@@ -40,7 +45,7 @@ const Page4 = () => (
     >
       <Gallery
         cols={7}
-        data={galleryData}
+        data={props.galleryData}
         width={1908}
         imgHeight={162}
         spacing={3}

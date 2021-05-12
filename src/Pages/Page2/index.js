@@ -5,16 +5,10 @@ import Gallery from "../../Component/Gallery";
 import Quote from "../../Component/Quote";
 
 import styles from "./page2.style";
-import contentData from "./page2.data.json";
-import data from "../../utils/temp";
 import { calcS } from "../../utils/calcSize";
-const quoteData = data.testimonials.nodes[0];
-const galleryData = data.partners.nodes.map((e) => {
-  return { url: e.data.Company_Logo[0].url };
-});
 
-const Page1 = () => (
-  <Layout title1={contentData.Heading1} title2={contentData.Heading2}>
+const Page1 = (props) => (
+  <Layout title1="COMPANIES WHO PARTNER " title2="WITH US">
     <View
       style={{
         marginTop: calcS(40),
@@ -25,7 +19,7 @@ const Page1 = () => (
     >
       <Gallery
         cols={4}
-        data={galleryData}
+        data={props.galleryData}
         width={1990}
         imgHeight={160}
         spacing={100}
@@ -35,7 +29,7 @@ const Page1 = () => (
       />
     </View>
     <View style={styles.LastContent}>
-      <Quote index={1} font={35} data={quoteData} dataWidth={1111}></Quote>
+      <Quote index={1} font={35} data={props.quoteData} dataWidth={1111}></Quote>
     </View>
   </Layout>
 );

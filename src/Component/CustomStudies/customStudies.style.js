@@ -49,7 +49,7 @@ const style = StyleSheet.create({
     width: calcS(876),
   },
   totalview: {
-    marginTop: calcS(67),
+    marginTop: calcS(50),
     flexDirection: "row",
   },
   approachview: {},

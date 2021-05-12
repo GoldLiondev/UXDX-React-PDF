@@ -13,7 +13,7 @@ const config = {
   widthRate: [0.2, 0.3, 0.3, 0.2],
   Conference_Name: {
     title: (width, height) => (
-      <View style={{ width, height, paddingLeft: calcS(20) }} debug={true}>
+      <View style={{ width, height, paddingLeft: calcS(20) }}>
         <Text style={[{ width }, styles.tableHeader, styles.verticalCenter]}>
           LOCATION
         </Text>

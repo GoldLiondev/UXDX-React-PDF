@@ -1,5 +1,5 @@
-const defaultsizeW=2480;
-const defaultsizeH=3508;
+const defaultsizeW = 2480;
+// const defaultsizeH=3508;
 const Totalwidth = 595.28;
 const Totalheight = 841.89;
 

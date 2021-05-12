@@ -1,18 +1,19 @@
 import React from "react";
 import { Text, View } from "@react-pdf/renderer";
 import styles from "./page7.style";
-import contentData from "./page7.data.json";
 import Layout from "../../Component/Layout";
 import CustomStudies from "../../Component/CustomStudies";
-import data from "../../utils/temp";
-const maindata = data.caseStudies.nodes;
-const Page7 = () => (
-  <Layout title1={contentData.Heading1} title2={contentData.Heading2}>
+const Page7 = (props) => (
+  <Layout title1="CASE " title2="STUDIES">
     <View style={styles.headersubtextview}>
-      <Text style={styles.headersubtext}>{contentData.headersubtext}</Text>
+      <Text style={styles.headersubtext}>
+        Every partner has different needs and objectives. Here are some of the
+        packages that we have done with our partners to help them to achieve
+        their goals.
+      </Text>
     </View>
     <View style={styles.CustomStudiesStyle}>
-      <CustomStudies maindata={maindata}></CustomStudies>
+      <CustomStudies maindata={props.maindata}></CustomStudies>
     </View>
   </Layout>
 );
